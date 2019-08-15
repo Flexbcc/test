@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" id="app">
+    <div v-for="product in products">
+    <p>Номер позиции : {{product.id}}</p>
+    <p>Название товара : {{product.title}}</p>
+    <p>Цена товара : {{product.price}}</p>
+    <p>Количество товара : {{product.quantity}}</p>
+</div>
+    <div>
+        <input type="text" v-model="id">
+        <input type="text" v-model="title">
+        <input type="text" v-model="price">
+        <input type="text" v-model="quantity">
+
+        <button @click="testAdd(id , title, price, quantity)"> Add to Products</button>
+        <button @click="viewConsole">Console.log</button>
+    </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
